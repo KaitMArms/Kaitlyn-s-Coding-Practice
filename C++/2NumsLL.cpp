@@ -2,6 +2,8 @@
 The digits are stored in reverse order, and each of their nodes contains a single digit. 
 Add the two numbers and return the sum as a linked list.
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.*/
+#include <iostream>
+using namespace std;
 
 struct ListNode {
     int val;
@@ -35,3 +37,28 @@ public:
         return res->next;
     }
 };
+
+int main() {
+    // l1 = [2,4,3]
+    ListNode* l1 = new ListNode(2,
+                        new ListNode(4,
+                            new ListNode(3)));
+
+    // l2 = [5,6,4]
+    ListNode* l2 = new ListNode(5,
+                        new ListNode(6,
+                            new ListNode(4)));
+
+    Solution sol;
+    ListNode* result = sol.addTwoNumbers(l1, l2);
+
+    // Print result
+    while (result != nullptr) {
+        cout << result->val;
+        if (result->next != nullptr) cout << " -> ";
+        result = result->next;
+    }
+    cout << endl;
+
+    return 0;
+}

@@ -8,7 +8,7 @@ class ListNode:
         self.val = val
         self.next = next
         
-class Solution(object):
+class TwoNumsLL(object):
     def addTwoNumbers(self, l1, l2):
         """
         :type l1: Optional[ListNode]
@@ -31,4 +31,25 @@ class Solution(object):
             if l1: l1 = l1.next
             if l2: l2 = l2.next
         return res.next
+    
+def main():
+    two_nums = TwoNumsLL()
+    l1 = ListNode(2)
+    l1.next = ListNode(4)
+    l1.next.next = ListNode(3)
+
+    l2 = ListNode(5)
+    l2.next = ListNode(6)
+    l2.next.next = ListNode(4)
+
+    sum_list = two_nums.addTwoNumbers(l1, l2)
+    output = []
+    while sum_list:
+        output.append(sum_list.val)
+        sum_list = sum_list.next
+
+    print("Sum of linked lists:", ' '.join(map(str, output)))
+
+if __name__ == "__main__":
+    main()
         

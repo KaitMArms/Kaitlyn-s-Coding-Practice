@@ -30,5 +30,24 @@ class TwoNumsLL {
         ListNode next;
         ListNode(int val) { this.val = val; }
     }
+
+    public static void main(String[] args) {
+        TwoNumsLL twoNums = new TwoNumsLL();
+        TwoNumsLL.ListNode l1 = twoNums.new ListNode(2);
+        l1.next = twoNums.new ListNode(4);
+        l1.next.next = twoNums.new ListNode(3);
+
+        TwoNumsLL.ListNode l2 = twoNums.new ListNode(5);
+        l2.next = twoNums.new ListNode(6);
+        l2.next.next = twoNums.new ListNode(4);
+
+        TwoNumsLL.ListNode sumList = twoNums.addTwoNumbers(l1, l2);
+        System.out.print("Sum of linked lists: ");
+        while (sumList != null) {
+            System.out.print(sumList.val + " ");
+            sumList = sumList.next;
+        }
+        System.out.println();
+    }
 }
 

@@ -4,28 +4,51 @@ Add the two numbers and return the sum as a linked list.
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.*/
 
 //Definition for singly-linked list.
-function ListNode(val, next) {
-    this.val = (val===undefined ? 0 : val)
-    this.next = (next===undefined ? null : next)
+class ListNode {
+    constructor(val) {
+        this.val = val;
+        this.next = null;
+    }
 }
 
-var addTwoNumbers = function(l1, l2) {
-    let res = new ListNode(0);
-    let current = res;
-    let carry = 0;
+class TwoNumsLL{
+    addTwoNumbers(l1, l2) {
+        let res = new ListNode(0);
+        let current = res;
+        let carry = 0;
 
-    while (l1 !==  null || l2 !== null || carry !== 0){
-        let l1val = l1 !== null ? l1.val : 0;
-        let l2val = l2 !== null ? l2.val : 0;
+        while (l1 !==  null || l2 !== null || carry !== 0){
+            let l1val = l1 !== null ? l1.val : 0;
+            let l2val = l2 !== null ? l2.val : 0;
 
-        let sum = l1val + l2val + carry;
-        carry = Math.floor(sum/10);
+            let sum = l1val + l2val + carry;
+            carry = Math.floor(sum/10);
 
-        current.next = new ListNode(sum % 10);
-        current = current.next;
+            current.next = new ListNode(sum % 10);
+            current = current.next;
 
-        if (l1 !== null) l1 = l1.next;
-        if (l2 !== null) l2 = l2.next;
+            if (l1 !== null) l1 = l1.next;
+            if (l2 !== null) l2 = l2.next;
+        }
+        return res.next;
     }
-    return res.next;
-};
+}
+
+(function main() {
+    const twoNums = new TwoNumsLL();
+    const l1 = new ListNode(2);
+    l1.next = new ListNode(4);
+    l1.next.next = new ListNode(3);
+
+    const l2 = new ListNode(5);
+    l2.next = new ListNode(6);
+    l2.next.next = new ListNode(4);
+
+    let sumList = twoNums.addTwoNumbers(l1, l2);
+    const output = [];
+    while (sumList) {
+        output.push(sumList.val);
+        sumList = sumList.next;
+    }
+    console.log(`Sum of linked lists: ${output.join(' ')}`);
+})();

@@ -19,4 +19,11 @@ class longestSubStr {
         }
         return longest;
     }
+
+    public static void main(String[] args) {
+        longestSubStr lss = new longestSubStr();
+        String testStr = "abcabcbb";
+        int result = lss.solution(testStr);
+        System.out.println("Longest substring without duplicates in \"" + testStr + "\": " + result);
+    }
 }

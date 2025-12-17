@@ -1,23 +1,32 @@
 // Given a string s, find the length of the longest substring without duplicate characters.
-var lengthOfLongestSubstring = function(s) {
-    const seen = new Map();
-    let longest = 0;
-    let start = 0;
+class LongestSubStr{
+    solution(s) {
+        const seen = new Map();
+        let longest = 0;
+        let start = 0;
 
-    for (let i = 0; i < s.length; i++) {
-        const c = s[i];
+        for (let i = 0; i < s.length; i++) {
+            const c = s[i];
 
-        if (seen.has(c) && seen.get(c) >= start) {
-            start = seen.get(c) + 1;
+            if (seen.has(c) && seen.get(c) >= start) {
+                start = seen.get(c) + 1;
+            }
+
+            seen.set(c, i);
+            
+            const tmp = i - start + 1;
+            if (tmp > longest) {
+                longest = tmp;
+            }
         }
 
-        seen.set(c, i);
-        
-        const tmp = i - start + 1;
-        if (tmp > longest) {
-            longest = tmp;
-        }
-    }
+        return longest;
+    };
+}
 
-    return longest;
-};
+(function main() {
+    const lss = new LongestSubStr();
+    const testStr = "abcabcbb";
+    const result = lss.solution(testStr);
+    console.log(`Longest substring without duplicates in "${testStr}": ${result}`);
+})();

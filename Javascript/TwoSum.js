@@ -2,13 +2,23 @@
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 You can return the answer in any order. */
 
-var twoSum = function(nums, target) {
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            if (nums[i] + nums[j] === target) {
-                return [i, j]; 
+class TwoSum{
+    twoSums(nums, target) {
+        for (let i = 0; i < nums.length; i++) {
+            for (let j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] === target) {
+                    return [i, j]; 
+                }
             }
         }
-    }
-    return null;
-};
+        return null;
+    };
+}
+
+(function main() {
+    const ts = new TwoSum();
+    const nums = [2, 7, 11, 15];
+    const target = 9;
+    const result = ts.twoSum(nums, target);
+    console.log(`Indices for target ${target}: [${result}]`);
+})();

@@ -12,24 +12,45 @@ class ListNode {
     }
 };
 
-function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
-    const res = new ListNode(0);
-    let current = res;
-    let carry = 0;
+class TwoNumsLL{
+    addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
+        const res = new ListNode(0);
+        let current = res;
+        let carry = 0;
 
-    while (l1 !== null || l2 !== null || carry !== 0) {
-        const l1Val = l1 !== null ? l1.val : 0;
-        const l2Val = l2 !== null ? l2.val : 0;
+        while (l1 !== null || l2 !== null || carry !== 0) {
+            const l1Val = l1 !== null ? l1.val : 0;
+            const l2Val = l2 !== null ? l2.val : 0;
 
-        const sum = l1Val + l2Val + carry;
-        carry = Math.floor(sum / 10);
+            const sum = l1Val + l2Val + carry;
+            carry = Math.floor(sum / 10);
 
-        current.next = new ListNode(sum % 10);
-        current = current.next;
+            current.next = new ListNode(sum % 10);
+            current = current.next;
 
-        if (l1 !== null) l1 = l1.next;
-        if (l2 !== null) l2 = l2.next;
+            if (l1 !== null) l1 = l1.next;
+            if (l2 !== null) l2 = l2.next;
+        }
+
+        return res.next;
     }
+}
 
-    return res.next;
-};
+(function main() {
+    const twoNums = new TwoNumsLL();
+    const l1 = new ListNode(2);
+    l1.next = new ListNode(4);
+    l1.next.next = new ListNode(3);
+
+    const l2 = new ListNode(5);
+    l2.next = new ListNode(6);
+    l2.next.next = new ListNode(4);
+
+    let sumList = twoNums.addTwoNumbers(l1, l2);
+    const output: number[] = [];
+    while (sumList) {
+        output.push(sumList.val);
+        sumList = sumList.next;
+    }
+    console.log("Sum of linked lists:", output.join(" "));
+})();

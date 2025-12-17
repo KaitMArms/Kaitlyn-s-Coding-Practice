@@ -1,7 +1,7 @@
 # Given a string s, find the length of the longest substring without duplicate characters.
 
-class Solution(object):
-    def lengthOfLongestSubstring(self, s):
+class LongestSubStr(object):
+    def solution(self, s):
         """
         :type s: str
         :rtype: int
@@ -19,3 +19,12 @@ class Solution(object):
             if tmp > longest:
                 longest = tmp
         return longest
+    
+def main():
+    lss = LongestSubStr()
+    test_str = "abcabcbb"
+    result = lss.solution(test_str)
+    print(f'Longest substring without duplicates in "{test_str}": {result}')
+    
+if __name__ == "__main__":
+    main()

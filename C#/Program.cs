@@ -9,6 +9,7 @@ class Program
         // Uncomment ONE problem at a time
         //RooksProblem.Run();
         //TwoSumProblem.Run();
-        AddTwoNumbersProblem.Run();
+        //AddTwoNumbersProblem.Run();
+        WithMostWaterProblem.Run();
     }
 }

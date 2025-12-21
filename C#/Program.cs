@@ -11,6 +11,7 @@ class Program
         //TwoSumProblem.Run();
         //AddTwoNumbersProblem.Run();
         //WithMostWaterProblem.Run();
-        RotateArrProblem.Run();
+        //RotateArrProblem.Run();
+        ValidParenthesesProblem.Run();
     }
 }

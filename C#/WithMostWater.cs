@@ -2,8 +2,6 @@
 find the max area of water given by two lines with the x-axis.
 Assume area = min(h1,h2) x width, 2 ≤ n ≤ 10⁵, 0 ≤ height[i] ≤ 10⁴*/
 
-using System.ComponentModel.DataAnnotations;
-
 class WithMostWaterProblem
 {
     public static void Run()

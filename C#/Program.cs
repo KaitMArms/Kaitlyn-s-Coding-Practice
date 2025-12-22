@@ -12,6 +12,7 @@ class Program
         //AddTwoNumbersProblem.Run();
         //WithMostWaterProblem.Run();
         //RotateArrProblem.Run();
-        ValidParenthesesProblem.Run();
+        //ValidParenthesesProblem.Run();
+        AnagramSorterProblem.Run();
     }
 }

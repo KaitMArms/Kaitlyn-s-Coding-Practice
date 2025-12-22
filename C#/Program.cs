@@ -13,6 +13,7 @@ class Program
         //WithMostWaterProblem.Run();
         //RotateArrProblem.Run();
         //ValidParenthesesProblem.Run();
-        AnagramSorterProblem.Run();
+        //AnagramSorterProblem.Run();
+        TopKFreqElementsProblem.Run();
     }
 }

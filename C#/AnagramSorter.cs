@@ -10,7 +10,7 @@ class AnagramSorterProblem
 {
     public static void Run()
     {
-         string[] input = { "eat", "tea", "tan", "ate", "nat", "bat" };
+        string[] input = { "eat", "tea", "tan", "ate", "nat", "bat" };
         List<List<string>> result = AnagramSorter(input);
 
         Console.WriteLine("Grouped Anagrams:");

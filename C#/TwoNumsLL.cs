@@ -2,6 +2,7 @@
 The digits are stored in reverse order, and each of their nodes contains a single digit. 
 Add the two numbers and return the sum as a linked list.
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.*/
+using System;
 
 public class AddTwoNumbersProblem
 {
@@ -54,15 +55,3 @@ public class AddTwoNumbersProblem
     }
 }
 
-// Shared type
-public class ListNode
-{
-    public int val;
-    public ListNode? next;
-
-    public ListNode(int val = 0, ListNode? next = null)
-    {
-        this.val = val;
-        this.next = next;
-    }
-}

@@ -8,7 +8,9 @@ class ListNode{
         this.val = val;
         this.next = next;
     }
+}
 
+class reverseListTS{
     static reverseList(head: ListNode | null): ListNode | null{
         let prev: ListNode | null = null;
         let cur: ListNode | null = head;
@@ -37,10 +39,10 @@ class ListNode{
     let head: ListNode | null = new ListNode(1, new ListNode(2, new ListNode(3)));
 
     console.log("Original:");
-    ListNode.printList(head); 
+    reverseListTS.printList(head); 
 
-    head = ListNode.reverseList(head); 
+    head = reverseListTS.reverseList(head); 
 
     console.log("Reversed:");
-    ListNode.printList(head); 
+    reverseListTS.printList(head); 
 })();

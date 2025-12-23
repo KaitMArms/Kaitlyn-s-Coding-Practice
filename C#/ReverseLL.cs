@@ -1,13 +1,11 @@
 // Reverses a singly linked list
 using System;
 
-class ReverseLLProblem{
+class ReverseLLProblem 
+{
     public static void Run()
     {
-        ListNode head = new ListNode(
-            1,
-            new ListNode(2, new ListNode(3))
-        );
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3)));
 
         Console.WriteLine("Original:");
         PrintList(head);
@@ -43,5 +41,4 @@ class ReverseLLProblem{
         }
         Console.WriteLine();
     }
-  
 }

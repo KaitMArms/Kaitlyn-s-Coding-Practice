@@ -17,6 +17,7 @@ class Program
         //TopKFreqElementsProblem.Run();
         //ReverseLLProblem.Run();
         //RemoveNthNodeProblem.Run();
-        MergeLLProblem.Run();
+        //MergeLLProblem.Run();
+        MaxDepthBSTProblem.Run();
     }
 }

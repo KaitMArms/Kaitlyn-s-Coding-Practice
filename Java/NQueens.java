@@ -11,10 +11,10 @@ class NQueens {
     public static void main(String[] args){
         NQueens sol = new NQueens();
         int n = 8;
-        System.out.println("Number of solutions for " + n +"-Queens: " + sol.NQueens(n)  + " Number of solutions for " + n + "-Queens: " + sol.NQueens(n));
+        System.out.println("Number of solutions for " + n +"-Queens: " + sol.nQueens(n)  + " Number of solutions for " + n + "-Queens: " + sol.nQueens(n));
     }
 
-    public int NQueens(int n){
+    public int nQueens(int n){
         res = 0;
         cols = new HashSet<>();
         diag1 = new HashSet<>();

@@ -8,7 +8,7 @@ class TreeNode{
     }
 }
 
-class BST{
+class MaxDepthBST{
     TreeNode insert(TreeNode root, int val) {
         if(root == null) {return new TreeNode(val);}
         else if(val < root.val) {root.left = insert(root.left, val);}
@@ -20,11 +20,9 @@ class BST{
         if(head == null) return 0;
         return 1 + Math.max(findDepth(head.left), findDepth(head.right));
     }
-}
 
-class MaxDepthBST {
     public static void main(String[] args) {
-        BST bst = new BST();
+        MaxDepthBST bst = new MaxDepthBST();
         TreeNode root = null;
         root = bst.insert(root, 5);
         bst.insert(root, 3);
@@ -36,3 +34,7 @@ class MaxDepthBST {
         System.out.println("Max Depth: " + bst.findDepth(root));
     }
 }
+
+
+    
+

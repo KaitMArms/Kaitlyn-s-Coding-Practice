@@ -18,6 +18,7 @@ class Program
         //ReverseLLProblem.Run();
         //RemoveNthNodeProblem.Run();
         //MergeLLProblem.Run();
-        MaxDepthBSTProblem.Run();
+        //MaxDepthBSTProblem.Run();
+        MaxIslandPathProblem.Run();
     }
 }

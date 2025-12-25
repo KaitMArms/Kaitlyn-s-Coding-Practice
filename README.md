@@ -1,4 +1,4 @@
-<b><p align="center"> # Kaitlyn's Coding Practice </p></b>
+# <b><p align="center">  Kaitlyn's Coding Practice </p></b>
 
 ### *Highlights of the QnA Below*
 - I am practicing six languages: Python, TypeScript, C++, C#, Java, and JavaScript.  

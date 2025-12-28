@@ -19,6 +19,8 @@ class Program
         //RemoveNthNodeProblem.Run();
         //MergeLLProblem.Run();
         //MaxDepthBSTProblem.Run();
-        MaxIslandPathProblem.Run();
+        //MaxIslandPathProblem.Run();
+        //LowestCommonAncestorProblem.Run();
+        PermsOfArrProblem.Run();
     }
 }
